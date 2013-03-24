@@ -1,0 +1,7 @@
+﻿@model GM.Web.Areas.Main.Blog.Models.BlogIndex
+
+@foreach (GM.Web.Areas.Main.Models.BlogPostViewer bpv in Model.BlogPostViewers) {
+    @: <div class="row">
+            Html.RenderPartial("~/Views/Partials/BlogPostViewer.cshtml", bpv);
+    @: </div>
+}

@@ -1,10 +1,10 @@
 ﻿using System.Data.Entity;
 using GM.Domain.Entities;
+using System;
 
 namespace GM.Domain.Concrete {
 
-    class EFDbContext : DbContext {
-
+    public class EFDbContext : DbContext {
         public DbSet<BlogPost> BlogPosts { get; set; }
     }
 }

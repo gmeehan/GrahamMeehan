@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GM.Web.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -22,7 +23,7 @@ namespace GM.Web {
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Main", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Main" } // Parameter defaults
             );
 
         }
@@ -35,6 +36,8 @@ namespace GM.Web {
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
         }
     }
 }

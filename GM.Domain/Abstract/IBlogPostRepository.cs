@@ -6,5 +6,7 @@ namespace GM.Domain.Abstract {
     public interface IBlogPostRepository {
 
         IQueryable<BlogPost> BlogPosts { get; }
+
+        void SaveBlogPost(BlogPost blogPost);
     }
 }

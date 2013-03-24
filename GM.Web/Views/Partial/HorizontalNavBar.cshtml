@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+    <a class="brand" href="#"><!--GrahamMeehan.com--></a>
+    <ul class="nav">
+        <li class="active"><a href="Main">Home</a></li>
+        <li><a href="Main/PortfolioIndex">Portfolio</a></li>
+        <li><a href="Main/AboutIndex">About This Site</a></li>
+    </ul>
+    </div>
+</div>
+
+@model IEnumerable<string>
+
+@Html.ActionLink("Home", "List", "Product")
+
+
+
+<!--NEED TO ADD MODEL FOR NAVIGATION BAR-->
